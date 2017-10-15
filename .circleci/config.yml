@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    working_directory: /fire
+    docker:
+      - image: enumack/buildcontainers:gtest-clang-5.0
+    steps:
+      - checkout
+      - run:
+          name: run tests
+          command: make test && ./bin/gtest
