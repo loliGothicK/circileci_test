@@ -6,4 +6,4 @@ jobs:
       - image: enumack/buildcontainers:gtest-clang-5.0
     steps:
       - checkout
-      - run: make test && ./bin/gtest
+      - run: make test && ./unittest
