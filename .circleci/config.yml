@@ -1,23 +1,9 @@
 version: 2
-jobs:        
-  clang_5_0:
-    working_directory: /circileci_test
+jobs:
+  build:
+    working_directory: /Cranberries/gtest
     docker:
       - image: enumack/buildcontainers:gtest-clang-5.0
     steps:
       - checkout
       - run: make test && ./bin/gtest
-  clang_4_0:
-    working_directory: /circileci_test
-    docker:
-      - image: enumack/buildcontainers:gtest-clang-4.0
-    steps:
-      - checkout
-      - run: make test && ./bin/gtest
-
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - clang_4_0
-      - clang_5_0
