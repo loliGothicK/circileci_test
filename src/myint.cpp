@@ -12,5 +12,5 @@ bool MyInt::isOdd()
 
 bool MyInt::isEven()
 {
-  return isOdd();  // 例として、ここにバグがある
+  return !isOdd();
 }
