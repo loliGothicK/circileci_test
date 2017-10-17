@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: /Cranberries/gtest
+    working_directory: /Cranberries/circleci_test
     docker:
       - image: enumack/buildcontainers:gtest-clang-5.0
     steps:
       - checkout
-      - run: make test && ./unittest
+      - run: cmake .. && make && ./gtest_example

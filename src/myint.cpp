@@ -1,4 +1,4 @@
-#include "myint.hpp"
+#include "../include/myint.hpp"
 
 MyInt::MyInt(int num)
 :num_(num)

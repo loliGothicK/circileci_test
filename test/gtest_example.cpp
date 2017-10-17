@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "myint.hpp"
+#include "../include/myint.hpp"
 
 namespace {
 
