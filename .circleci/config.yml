@@ -1,8 +1,9 @@
 version: 2
 jobs:
   build:
+    working_directory: /circileci_test
     docker:
       - image: enumack/buildcontainers:gtest-clang-5.0
     steps:
       - checkout
-      - run: cmake .. && make && ./gtest_example
+      - run: cmake . && make && ./gtest_example
