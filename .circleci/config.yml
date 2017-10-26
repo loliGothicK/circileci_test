@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /circileci_test
     docker:
-      - image: enumack/buildcontainers:gtest-clang-5.0
+      - image: enumack/buildcontainers:clang-4.0.1
     steps:
       - checkout
-      - run: cmake . && make && ./test/gtest_example
+      - run: cmake . -DCMAKE_CXX_COMPILER=$CXX && make && ctest --no-label-summary --parallel 4
