@@ -8,5 +8,5 @@ auto test(T&&) -> std::enable_if_t<std::is_integral<std::decay_t<T>>::value>
 }
 
 int main(){
-  test();
+  test(1);
 }
