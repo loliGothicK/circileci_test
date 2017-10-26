@@ -18,4 +18,6 @@ set(sources
 	test.cpp
 )
 
-set_tests_properties(lib-link-test PROPERTIES LABELS "all")
+add_executable(${target} ${sources})
+add_test(test "${EXECUTABLE_OUTPUT_PATH}/${target}")
+set_tests_properties(test PROPERTIES LABELS "all")
